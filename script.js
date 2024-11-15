@@ -1,8 +1,14 @@
-function beforesubmit(){
-    let outputdate = document.querySelector(".outputdate");
+let capchaChecked = false;
+function beforesubmit(event){
+    if(capchaChecked){
+        let outputdate = document.querySelector(".outputdate");
     let inputdate = document.querySelector(".inputdate");
     let formattedDate = new Date(inputdate.value).toLocaleDateString("en-IN");
     outputdate.value = formattedDate;
+    }else{
+        alert("Plese check the Capcha box to submit form");
+        event.preventDefault();
+    }
 }
 
 function timestamp() { 
@@ -14,3 +20,7 @@ function timestamp() {
      } 
     } 
     setInterval(timestamp, 500); 
+
+    capchasuccess(){
+        capchaChecked=true;
+    }  
