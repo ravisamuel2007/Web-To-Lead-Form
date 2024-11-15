@@ -6,7 +6,7 @@ function beforesubmit(event){
     let formattedDate = new Date(inputdate.value).toLocaleDateString("en-IN");
     outputdate.value = formattedDate;
     }else{
-        alert("Plese check the Capcha box to submit form");
+        alert("Please check the capcha box to submit form");
         event.preventDefault();
     }
 }
