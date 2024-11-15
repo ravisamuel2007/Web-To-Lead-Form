@@ -22,6 +22,6 @@ function timestamp() {
     
 setInterval(timestamp, 500); 
 
-function capchasuccess(){
+function capthchasuccess(){
     capchaChecked = true;
 }
