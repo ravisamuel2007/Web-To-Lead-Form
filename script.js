@@ -1,4 +1,5 @@
 let capchaChecked = false;
+console.log('capchaChecked on load->',capchaChecked);
 function beforesubmit(event){
     if(capchaChecked){
     let outputdate = document.querySelector(".outputdate");
@@ -8,7 +9,7 @@ function beforesubmit(event){
     }else{
         alert("Please check the capcha box to submit form");
         event.preventDefault();
-        capchaChecked = false;
+        //capchaChecked = false;
     }
 }
 
@@ -25,4 +26,5 @@ setInterval(timestamp, 500);
 
 function capthchasuccess(){
     capchaChecked = true;
+    console.log('capchaChecked after click->',capchaChecked);
 }
