@@ -8,6 +8,7 @@ function beforesubmit(event){
     }else{
         alert("Please check the capcha box to submit form");
         event.preventDefault();
+        capchaChecked = false;
     }
 }
 
