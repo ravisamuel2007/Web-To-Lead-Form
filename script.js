@@ -1,7 +1,7 @@
 let capchaChecked = false;
 function beforesubmit(event){
     if(capchaChecked){
-        let outputdate = document.querySelector(".outputdate");
+    let outputdate = document.querySelector(".outputdate");
     let inputdate = document.querySelector(".inputdate");
     let formattedDate = new Date(inputdate.value).toLocaleDateString("en-IN");
     outputdate.value = formattedDate;
@@ -18,9 +18,10 @@ function timestamp() {
         elems["ts"] = JSON.stringify(new Date().getTime());
         document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems);
      } 
-    } 
-    setInterval(timestamp, 500); 
+} 
+    
+setInterval(timestamp, 500); 
 
-    capchasuccess(){
-        capchaChecked=true;
-    }  
+function capchasuccess(){
+    capchaChecked = true;
+}
